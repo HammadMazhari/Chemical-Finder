@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Information Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Chemical Information Finder</h1>
+      <p>Discover detailed information about any chemical compound</p>
+    </header>
+    
+    <div class="input-group">
+      <label for="chemicalName">Enter Chemical Name:</label>
+      <input type="text" id="chemicalName" placeholder="e.g., Water" onfocus="this.placeholder = ''" onblur="this.placeholder = 'e.g., Water'">
+      <button onclick="searchChemical()">Search</button>
+    </div>
+    
+    <div class="result" id="result">
+      <p id="iupacName">IUPAC Name: </p>
+      <p id="commonName">Common Name: </p>
+      <p id="molecularWeight">Molecular Weight: </p>
+      <p id="formula">Formula: </p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 Chemical Information Finder. All rights reserved. <span class="footer-highlight">Hammad Mazhar</span></p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

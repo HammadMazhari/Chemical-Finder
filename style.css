@@ -1,0 +1,158 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container with fade-in animation */
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Header */
+header h1 {
+  font-size: 28px;
+  color: #005c99;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideDown 0.8s ease 0.4s forwards;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Input styling */
+#chemicalName {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  width: 90%;
+  max-width: 350px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#chemicalName:focus {
+  border-color: #005c99;
+  box-shadow: 0 4px 12px rgba(0, 92, 153, 0.3);
+  outline: none;
+}
+
+/* Button with hover animation */
+button {
+  padding: 12px 30px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #005c99;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 92, 153, 0.4);
+}
+
+/* Result styling */
+.result {
+  background-color: #eaf4ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.8s forwards;
+}
+
+.result p {
+  margin: 10px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Error styling */
+.error {
+  color: #ff4d4d;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ff4d4d;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #003d66;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer-highlight {
+  font-weight: bold;
+  color: #ffe600;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+  
+  button {
+    width: 80%;
+    padding: 12px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
